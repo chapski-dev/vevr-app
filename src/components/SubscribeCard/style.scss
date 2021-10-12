@@ -1,0 +1,74 @@
+.subscribe-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  flex: 1;
+  margin-right: 8px;
+  padding-bottom: 23px;
+  background: #F3F2F9;
+  backdrop-filter: blur(9.06094px);
+  border-radius: 5px;
+  overflow: hidden;
+  text-decoration: none;
+  color: black;
+  &.active {
+    background: linear-gradient(225deg, #894AC9 0%, #4D46B1 100%);
+    backdrop-filter: blur(9.06094px);
+    .subscribe-card__info-month {
+      color: #FFFFFF;
+    }
+    .subscribe-card__info-price {
+      color: #FFFFFF;
+    }
+    .subscribe-card__info-price-per-month {
+      color: #FFFFFF;
+    }
+  }
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+.subscribe-card__info-month {
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.subscribe-card__save {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #FCA759;
+  width: 100%;
+  margin-bottom: 3px;
+  &.big {
+    background: #FCBF59;
+  }
+}
+.subscribe-card__info-price {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: center;
+  letter-spacing: -0.3px;
+  margin-bottom: 3px;
+}
+.subscribe-card__info-price-per-month {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  letter-spacing: -0.272727px;
+}
+.subscribe-card__sale {
+  position: absolute;
+  bottom: 0%;
+  background: #FCA759;
+  backdrop-filter: blur(9.06094px);
+  width: 100%;
+}

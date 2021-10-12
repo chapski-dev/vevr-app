@@ -1,0 +1,33 @@
+.feedback-card {
+  padding: 15px 15px 12px 15px;
+  background: #F3F2F9;
+  backdrop-filter: blur(9.06094px);
+  border-radius: 10px;
+}
+
+.feedback-card__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  &-title {
+    color: #1A1A1A;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  &-auther {
+    color: #1A1A1A;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    opacity: 0.5;
+  }
+}
+.feedback-card__stars {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+}
+.feedback-card__text {
+  text-align: left;
+}

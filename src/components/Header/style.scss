@@ -1,0 +1,145 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 320px;
+  width: 100%;
+  background: linear-gradient(225deg, #894AC9 0%, #4D46B1 100%);
+  padding-top: 30px;
+  &-title {
+    color: white;
+    letter-spacing: 0.261176px;
+    font-size: 24px;
+    line-height: 41px;
+  }
+}
+.header-close-btn {
+  align-self: flex-end;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.527344);
+  border: none;
+  border-radius: 100%;
+  color: #4D46B1;
+  font-weight: 900;
+  font-size: 19px;
+  margin-right: 10px;
+}
+.header-img-wrapper {
+  position: relative;
+  z-index: 1;
+  .header-img {
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    width: 80px;
+    height: auto;
+  }
+}
+
+.header-points-row {
+  position: relative;
+  overflow: hidden;
+  &:after {
+    background: #fff;
+    content: "";
+    height: 200%;
+    left: -50%;
+    opacity: .1;
+    position: absolute;
+    top: -50%;
+    transform: rotate(35deg);
+    transition: all 10s;
+    width: 50px;
+    z-index: 2;
+    @keyframes move {
+      from {
+        left: -75px;
+      }
+      to {
+        left: 1000%;
+      }
+    }
+    animation: move 8s linear infinite;
+    animation-delay: 5s;
+  }
+}
+
+.header-svg-wrapper {
+  position: relative;
+  svg {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-name: line;
+    animation-duration: 2s;
+    animation-delay: 0;
+    stroke-dasharray: 420;
+    stroke-dashoffset: 420;
+    @keyframes line {
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+  }
+  .lineOne {
+    top: 25px;
+  }
+  .lineTwo {
+    top: 50px;
+  }
+
+  .free, .pro {
+    opacity: 0;
+    animation: show 1s 1;
+    animation-fill-mode: forwards; 
+    animation-delay: 1.3s;
+
+    @keyframes show{
+      0%{
+        opacity:0;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity:1;
+      }
+      100% {
+        opacity:1;
+        transform: scale(1);
+      }
+    }
+
+
+    position: absolute;
+    right: 30px;
+    top: -1px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 51px;
+    height: 27px;
+    background-color: #fff;
+    border-radius: 20px;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 30px;
+      display: block;
+      border-radius: 100%;
+      background-color: red;
+      width: 14px;
+      height: 14px;
+      border: 3.5px white solid;
+
+    }
+  }
+  .pro {
+    right: 30px;
+    top: 50px;
+    &::after {
+      background-color: green;
+    }
+  }
+}
